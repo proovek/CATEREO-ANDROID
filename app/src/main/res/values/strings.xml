@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CATEREO</string>
+    <string name="title_home">Home</string>
+    <string name="title_cart">Dashboard</string>
+    <string name="title_menu">Notifications</string>
+    <string name="title_orders">Notifications</string>
+    <string name="title_profile">Notifications</string>
+</resources>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/catereo_bg_fajne">
+
+    <LinearLayout
+        android:id="@+id/logoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <!-- ImageView z logo -->
+        <ImageView
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/logoImageView"
+            android:layout_width="256dp"
+            android:layout_height="128dp"
+            android:src="@drawable/logo_o_takie"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/logoLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/screenLayout"
+        android:background="@drawable/gradient_layout"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+    <!-- EditText dla loginu -->
+        <TextView
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logowanie"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+
+    <!-- EditText dla hasła -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/login"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Login"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@null"
+                android:drawableLeft="@drawable/login_avatar"
+                android:drawablePadding="8dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:hint="Hasło"
+                android:drawablePadding="8dp"
+                android:background="@null"
+                android:drawableStart="@drawable/key_12898520"
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Przycisk Zaloguj -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Zaloguj"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/logotype_yellow"
+            app:cornerRadius="50dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/logotype_yellow"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditText"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton">
+
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

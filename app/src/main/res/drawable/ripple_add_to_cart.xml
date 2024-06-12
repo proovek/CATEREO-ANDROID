@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?android:attr/colorControlHighlight"> <!-- Kolor efektu ripple -->
+
+    <item android:drawable="@drawable/ic_addtocart_black_24dp_outlined" /> <!-- Obrazek tła przycisku -->
+
+</ripple>

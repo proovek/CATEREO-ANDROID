@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/good_gray"/> <!-- biały tło; zmień na pożądany kolor tła -->
+    <corners android:radius="20dp"/> <!-- zaokrąglenie rogów -->
+</shape>

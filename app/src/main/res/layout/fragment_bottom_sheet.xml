@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners"
+    android:padding="15dp">
+
+    <!-- Tutaj dodaj elementy interfejsu użytkownika dla Twojego wysuwanego widoku -->
+    <LinearLayout
+        android:id="@+id/firstDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/detailsImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_launcher_background"
+            ></de.hdodenhof.circleimageview.CircleImageView>
+                <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textItemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nazwa przedmiotu"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingBottom="5dp"
+                        />
+                    <TextView
+                        android:id="@+id/textItemDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Opis przedmiotu"
+                        android:textSize="13sp"
+                        android:textStyle=""
+                        />
+                </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="vertical">
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small">
+
+            </RatingBar>
+
+            <ImageView
+                android:layout_gravity="end"
+                android:id="@+id/isVege"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:visibility="visible"
+                android:src="@drawable/vege">
+            </ImageView>
+
+            <ImageView
+                android:layout_gravity="end"
+                android:id="@+id/isVegan"
+                android:layout_width="48dp"
+                android:layout_height="24dp"
+                android:visibility="visible"
+                android:src="@drawable/vegan">
+
+            </ImageView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/secondDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Składniki"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"> <!-- Usuń pasek przewijania, jeśli chcesz -->
+
+            <LinearLayout
+                android:id="@+id/pillContainerIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pill_drawable"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Twoja treść"
+                    android:textColor="@color/selective_yellow"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/thirdDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alergeny"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"> <!-- Usuń pasek przewijania, jeśli chcesz -->
+
+            <LinearLayout
+                android:id="@+id/pillContainerAllergens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pill_drawable"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="10sp"
+                    android:text="Twoja treść"
+                    android:textColor="@color/selective_yellow"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/itemPrice"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/selective_yellow"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00.00 zł">
+
+        </TextView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dodaj do koszyka"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="50dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/selective_yellow"
+            android:backgroundTint="@color/selective_yellow"
+            android:layout_gravity="center_vertical"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton">
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+
+</LinearLayout>
